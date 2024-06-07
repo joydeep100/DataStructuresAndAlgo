@@ -17,3 +17,8 @@ array.splice(start_index, no_of_items_to_remove, new_items_to_add__optional__)
 let str2 = 'hello'
 // str2[0] === str2.slice(-1) would give the first and last character
 // and we can also do str2.slice(0,1) to get the first character
+
+
+// [wip]
+// .sort() is bizzare, need to write notes about it.
+
