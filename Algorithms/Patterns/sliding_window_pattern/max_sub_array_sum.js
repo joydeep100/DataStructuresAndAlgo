@@ -1,19 +1,19 @@
-// We need to find largest sum of n items in a given array
-// sub array is a congruent data
+// We need to find largest sum of n (number) items in a given array
+// sub array is a contiguous data
 // ex maxSubArray([1,2,3,4], 2) returns 7 (sum of largest 2 congruent items)
 
-function maxSubArray(arr, n) {
+function maxSubArray(arr, number) {
 
     let max = 0
     let tmpMax = 0
-    if (arr.length < n) return null
-    for (let i = 0; i < n; i++) {
+    if (arr.length < number) return null
+    for (let i = 0; i < number; i++) {
         max += arr[i]
     }
 
     tmpMax = max // place where i missed to define
-    for (let i = n; i < arr.length; i++) {
-        tmpMax = tmpMax + arr[i] - arr[i - n] //i missed here as well, use max instead of tmpMax
+    for (let i = number; i < arr.length; i++) {
+        tmpMax = tmpMax + arr[i] - arr[i - number] //i missed here as well, use max instead of tmpMax
         // max is init, then offcourse the iterative checking must be done using tmpMax right.
         max = Math.max(tmpMax, max)
     }

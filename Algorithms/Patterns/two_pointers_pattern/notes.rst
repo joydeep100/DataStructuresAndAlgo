@@ -1,2 +1,1 @@
-This pattern assumes data is sorted, if not do it.
-else this wont work
+- For some problems it is vital that data is sorted!

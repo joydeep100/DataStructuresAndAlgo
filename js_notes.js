@@ -8,6 +8,8 @@ arr1 = [...str1] // second way
 // slice
 
 arr.slice(start_index, end_index__optional__)
+'ababa'.slice(0,5) // would give 'ababa', same as a python slice.
+// remember array methods also mostly work on string as well like indexing etc
 
 // splice
 
@@ -22,3 +24,12 @@ let str2 = 'hello'
 // [wip]
 // .sort() is bizzare, need to write notes about it.
 
+
+// Array swap (only - *dont use for variable swap*) [a,b] = [b,a] or use the above thing
+[nums1[i], nums2[j]] = [nums2[j], nums1[i]]
+
+function isAlphanumeric(code) {
+    // digits: 48-57
+    // lowercase letters: 97-122 
+    return ((code >= 48 && code <= 57) || (code >= 97 && code <= 122)) 
+}

@@ -30,6 +30,6 @@ i
 
 now when i !== j, we can conviniently move both the pointers right
 so as i = 2, j = 3
-just moving j = 3 will make this into O(n^2) and it does not even require
-because we established that i !== j
+
+but remember this will only work on sroted arrays
 */
