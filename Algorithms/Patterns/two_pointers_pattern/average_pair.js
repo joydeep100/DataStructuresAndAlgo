@@ -1,22 +1,3 @@
-function averagePair(arr, avg_input) {
-
-    if (!arr.length) return false
-
-    let avg = 0
-    let j = 1
-
-    for (let i = 0; i < avg_input; i++) {
-
-        avg = (arr[i] + arr[j]) / 2
-        if (avg.toFixed(2) === avg_input.toFixed(2))
-            // .toFixed(2) restricts to 2 decimal point and does not alter the original variable value
-            return true
-        j++
-    }
-
-    return false
-}
-
 function averagePairImproved(arr, avg_input) {
 
     if (!arr.length) return false

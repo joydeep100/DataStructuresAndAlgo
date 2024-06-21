@@ -20,11 +20,6 @@ let str2 = 'hello'
 // str2[0] === str2.slice(-1) would give the first and last character
 // and we can also do str2.slice(0,1) to get the first character
 
-
-// [wip]
-// .sort() is bizzare, need to write notes about it.
-
-
 // Array swap (only - *dont use for variable swap*) [a,b] = [b,a] or use the above thing
 [nums1[i], nums2[j]] = [nums2[j], nums1[i]]
 
@@ -33,3 +28,8 @@ function isAlphanumeric(code) {
     // lowercase letters: 97-122 
     return ((code >= 48 && code <= 57) || (code >= 97 && code <= 122)) 
 }
+
+// to get length of an object
+const obj = { a: 1, b: 2, c: 3 };
+const length = Object.keys(obj).length;
+console.log(length); // Output: 3

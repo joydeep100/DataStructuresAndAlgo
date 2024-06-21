@@ -21,7 +21,6 @@ var maxArea = function (height) {
     let area
     while (1 <= r) {
         area = Math.min(height[l], height[r]) * (r - l)
-        // console.log(l,r, area)
         if (area > maxArea) maxArea = area
 
         // Move the pointer that points to the shorter line

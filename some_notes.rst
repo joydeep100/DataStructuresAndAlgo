@@ -3,3 +3,12 @@
 
 visited = {}
 visited[s[left]]-- is same as visited[s[left]] = visited[s[left]] - 1
+
+sorting the array is O(nlog(n))
+
+if (count === s.length) return true
+else return false
+.. can also be written as below
+return (j === s.length) ? true : false
+.. but (j === s.length) ? return true : return false is wrong
+

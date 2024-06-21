@@ -1,6 +1,4 @@
-/*
-424. Longest Repeating Character Replacement
-Medium
+/* 424. Longest Repeating Character Replacement
 You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
 Return the length of the longest substring containing the same letter you can get after performing the above operations.
 
@@ -47,7 +45,7 @@ var characterReplacement = function(str, k) {
             countCharsMap = {A: 2, B:1}
 
             so (r - l + 1) - maxFreq({A: 2, B:1}) > k
-            3 - 2 > 2 (if this happens then we need to remove left most char and inrement left pointer)
+            3 - 2 > 2 (if this happens then we need to remove left most char and increment left pointer)
 
             basically if this condition happens we need to bring the window to valid condition
         */

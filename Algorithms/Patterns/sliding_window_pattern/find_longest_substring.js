@@ -57,7 +57,7 @@ function lengthOfLongestSubstring(str) {
     while (right < str.length) {
 
         let currentChar = str[right]
-        if (tmpMap.hasOwnProperty(currentChar) && tmpMap[str[right]] >= left){
+        if (tmpMap.hasOwnProperty(currentChar) && tmpMap[currentChar] >= left){
             // it means we do have a repeating character and the repeating character is within the current window that we are looking
             
             // left should be next index where we had seen the char

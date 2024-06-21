@@ -31,5 +31,5 @@ i
 now when i !== j, we can conviniently move both the pointers right
 so as i = 2, j = 3
 
-but remember this will only work on sroted arrays
+but remember this will only work on sorted arrays
 */
