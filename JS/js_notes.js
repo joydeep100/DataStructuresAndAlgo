@@ -33,3 +33,12 @@ function isAlphanumeric(code) {
 const obj = { a: 1, b: 2, c: 3 };
 const length = Object.keys(obj).length;
 console.log(length); // Output: 3
+
+// In JS strings are immutable
+let cdx = "hello";
+cdx[0] = 'x'; // This will not work
+console.log(cdx); // Outputs "hello"
+
+let cdx = "hello"; 
+cdx = 'x' + cdx.slice(1);
+console.log(cdx); // Outputs "xello"

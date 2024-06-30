@@ -92,3 +92,8 @@ function majorityElementBM(nums) {
 // console.log(majorityElementBF([2, 2, 1, 1, 1, 2, 2]))
 // console.log(majorityElementHM([2, 2, 1, 1, 1, 2, 2]))
 console.log(majorityElementBM([2, 2, 1, 1, 1, 2, 2]))
+
+
+{[( ) ] }
+    
+stack = [ '(', '[' , '{' ]

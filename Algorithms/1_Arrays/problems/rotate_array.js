@@ -15,7 +15,7 @@ function rotate(nums, k) {
     [1,2,3,4,5,6,7] and say k = 3 Output: [5,6,7,1,2,3,4]
 
     first we fill from k to nums.length -1 
-    [_,_,_,1,2,3,4,5]
+    [_,_,_,1,2,3,4]
 
     then we have to fill 5,6,7 in the intial part which can be done using mod
     so, 5 should go in 0'th index

@@ -1,6 +1,11 @@
 Time complexity
+---------------
 
-O(f(n)) = n^2 # quadratic or exponential curve
+O(f(n)) = n! 
+
+O(f(n)) = 2^n # exponential // happens in calculating fibanocci with recuirsion!
+
+O(f(n)) = n^2 # quadratic
 
 O(f(n)) = n*log(n)
 

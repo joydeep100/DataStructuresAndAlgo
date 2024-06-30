@@ -19,7 +19,7 @@ var maxArea = function (height) {
     let r = height.length - 1
     let maxArea = 0
     let area
-    while (1 <= r) {
+    while (1 < r) {
         area = Math.min(height[l], height[r]) * (r - l)
         if (area > maxArea) maxArea = area
 
@@ -42,3 +42,29 @@ var maxArea = function (height) {
 
 console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]))
 
+// see logic is very simple, if left one is smaller than right one then left++ and vice versa
+// lets re write the same problem with better readable code
+
+var maxArea2 = function (height) {
+
+    let left = 0
+    let right = height.length - 1
+    let res = -Infinity
+
+    while (left < right) {
+
+        let maxArea = (Math.min(height[left], height[right]) * (right - left))
+        if (maxArea > res) {
+            res = maxArea
+        }
+
+        if (height[left] < height[right]) left++
+        else right--
+
+    }
+
+    return res
+
+};
+
+console.log(maxArea2([1, 8, 6, 2, 5, 4, 8, 3, 7]))
