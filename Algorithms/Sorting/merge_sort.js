@@ -16,11 +16,12 @@ space complexity - O(n)
 // lets us start by writing merge() of two sorted arrays
 
 function merge(arr1, arr2){
+    // merging two sorted arrays - this is the key
 
     mergedArr = []
     let i = 0
     let j = 0
-    while (i < arr1.length && j < arr2.length) {
+    while (i < arr1.length && j < arr2.length) { //this would ensure the min one would be considered
 
         if (arr1[i] < arr2[j]){
             mergedArr.push(arr1[i])
@@ -58,14 +59,13 @@ function mergeSort(arr){
 
     if (arr.length <= 1) return arr
     let mid = Math.floor(arr.length / 2)
-    let left = mergeSort(arr.slice(0, mid))
+    let left = mergeSort(arr.slice(0, mid))   //vvi, in slice till mid means it does not include mid right.
     let right = mergeSort(arr.slice(mid))
 
     return merge(left, right)
 
 }
 
-// mistake, called mergeSort like this mergeSort[1,10,3,2,7,8,6,1] and it was returning undefined :P
 console.log(mergeSort([1,10,3,2,7,8,6,1]))
 
 /* implementation using queue

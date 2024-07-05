@@ -42,3 +42,6 @@ console.log(cdx); // Outputs "hello"
 let cdx = "hello"; 
 cdx = 'x' + cdx.slice(1);
 console.log(cdx); // Outputs "xello"
+
+//to quickly reverse a string in js we have to use 
+'hello'.split('').reverse().join(''); 
