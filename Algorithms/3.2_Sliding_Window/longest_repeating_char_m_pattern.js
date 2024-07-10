@@ -1,5 +1,6 @@
 /* 424. Longest Repeating Character Replacement
-You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+You are given a string s and an integer k. You can choose any character of the string and change 
+it to any other uppercase English character. You can perform this operation at most k times.
 Return the length of the longest substring containing the same letter you can get after performing the above operations.
 
 Example 1:
@@ -37,7 +38,7 @@ var characterReplacement = function(str, k) {
         countCharsMap[str[right]] = (countCharsMap[str[right]] || 0) + 1
         maxFreq = Math.max(maxFreq, countCharsMap[str[right]]) //like this [1]
 
-        /* lets say the loop is somthing like this
+        /* lets say the loop is something like this
             l
             A B A B B A
                 r
@@ -45,20 +46,27 @@ var characterReplacement = function(str, k) {
             countCharsMap = {A: 2, B:1}
 
             so (r - l + 1) - maxFreq({A: 2, B:1}) > k
-            3 - 2 > 2 (if this happens then we need to remove left most char and increment left pointer)
+            3 - 2 > 2 (**if this happens then we need to remove left most char and increment left pointer)
 
             basically if this condition happens we need to bring the window to valid condition
+
+            okay here is the logic
+            ABABBA
+             *  * // consider these are the window pointers, so we just check the length of the window 
+             minus the character which is repeating the maximum nomber of times, that value should be
+             below k, till right < end!!
         */
 
 
         // if(((right - left + 1) - maxFreq(countCharsMap)) > k){   
         // we can know the maxFreq right so no need to compute for all 26 chars [1]
-        while (((right - left + 1) - maxFreq) > k) {
+        while (((right - left + 1) - maxFreq) > k && right < str.length) { 
+            // added this (right < str.length) because we might just go out of bound right.
             countCharsMap[str[left]] -= 1
             left++
         } 
 
-        /* very imp pattern, run a for or a while for right till end
+        /* very imp pattern, run a loop for right pointer till end
         then if invalid condition occurs run a while loop to make it proper
 
         */
@@ -72,4 +80,4 @@ var characterReplacement = function(str, k) {
 
 };
 
-console.log(characterReplacement("ABAB", 2))
+console.log(characterReplacement("ABAB", 2)) // 4

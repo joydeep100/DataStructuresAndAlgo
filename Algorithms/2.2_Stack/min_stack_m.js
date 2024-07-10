@@ -29,7 +29,6 @@ minStack.pop();
 minStack.top();    // return 0
 minStack.getMin(); // return -2
 */
-
 var MinStack = function() {
     this.stack = []
     this.minStack = []
@@ -37,10 +36,6 @@ var MinStack = function() {
 
 };
 
-/** 
- * @param {number} val
- * @return {void}
- */
 MinStack.prototype.push = function(val) {
     this.stack.push(val)
     

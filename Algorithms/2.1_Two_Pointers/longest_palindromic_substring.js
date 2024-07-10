@@ -1,5 +1,4 @@
-/*
-
+/*  https://www.youtube.com/watch?v=XYQecbcd6_c
     Palindromes have 2 cases
                          i
     odd palindrome - a b a b a //single center
@@ -25,7 +24,7 @@ var longestPalindrome = function (s) {
 
             if ((r - l + 1) > maxLen) {
                 maxLen = (r - l + 1)
-                maxStr = s.slice(l, r+1)
+                maxStr = s.slice(l, r + 1)
             }
             l--
             r++
@@ -38,7 +37,7 @@ var longestPalindrome = function (s) {
 
             if ((r - l + 1) > maxLen) {
                 maxLen = (r - l + 1)
-                maxStr = s.slice(l, r+1)
+                maxStr = s.slice(l, r + 1)
             }
             l--
             r++
@@ -49,4 +48,16 @@ var longestPalindrome = function (s) {
 };
 
 
-console.log(longestPalindrome('abab'))
+console.log(longestPalindrome('abab')) // aba
+
+
+/* Logic, for odd case.
+
+    let s = 'abab', 
+    we take l=a, r=a, try to exand left, it goes out of bounds so we continue
+    now l=b, r=b, now we expand both ways and since s[l] == s[r]... we store this string and also update the lenght
+
+    basically we continue this process.
+
+
+*/

@@ -61,7 +61,8 @@ function twoSum2pOrgIdx(nums, target) {
     let numsWithIndices = []
     // Use a for loop to populate the numsWithIndices array
     for (let i = 0; i < nums.length; i++) {
-        numsWithIndices.push({ num: nums[i], index: i });
+        numsWithIndices.push({ num: nums[i], index: i }); 
+        // ***this is just creating another list, in which we also retain the original index***
     }
 
     numsWithIndices = numsWithIndices.sort((a, b) => a.num - b.num) // we lost the original indexes, so lets return the pair value instead which sums to target

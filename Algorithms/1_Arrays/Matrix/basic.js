@@ -23,7 +23,6 @@ const intArrUsingArr = function (m, n, val) {
 
     // let arr = new Array(m).fill(0) , incase we want to pre-fill all the values with 0
 
-
     for (let i = 0; i < m; i++) {
         let column = new Array(n)
         for (let j = 0; j < n; j++) {

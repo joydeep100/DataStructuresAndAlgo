@@ -19,7 +19,7 @@ function lengthOfLongestSubstringBF(str) {
     let maxLen = 0
     /* let i = each char, and j will be all possible substrings from i'th char
     we just use a simple list, to check if char is already in it. when we find a duplicate char we just simply break if not
-    because when we get to lets say 'abca'bcbb we break, dont worry about rhs part it will anyways get covered as i moves right in subsequent iterations
+    because when we get to lets say 'abca'bcbb we break, dont worry about rhs part it will anyways get covered as i moves rightIndex in subsequent iterations
     */
     for (let i = 0; i < str.length; i++) {
 
@@ -46,30 +46,32 @@ function lengthOfLongestSubstring(str) {
               r
     */
 
-    let left = 0
-    let right = 0
+    let leftIndex = 0
+    let rightIndex = 0
     let tmpMap = {}
     let maxLen = 0
 
     // O(hasOwnProperty) = 1 
     // ways to look up Obj. Obj.hasOwnProperty() / 'key1' in obj / Object.keys(obj).includes('key1')
 
-    while (right < str.length) {
+    while (rightIndex < str.length) {
 
-        let currentChar = str[right]
-        if (tmpMap.hasOwnProperty(currentChar) && tmpMap[currentChar] >= left){
+        let currentChar = str[rightIndex]
+        if (tmpMap.hasOwnProperty(currentChar) && tmpMap[currentChar] >= leftIndex){
             // it means we do have a repeating character and the repeating character is within the current window that we are looking
+            // tmpMap[currentChar] >= leftIndex because we want to ignore the part before leffIndex which we have left out
             
-            // left should be next index where we had seen the char
-            left = tmpMap[currentChar] + 1
+            // leftIndex should be next index where we had seen the char, other approach would have been to loop until we make sure 
+            // the Map is valid, but this is a better approach
+            leftIndex = tmpMap[currentChar] + 1
 
             // we also need to update the index of the charcter with the current index
-            tmpMap[currentChar] = right
+            tmpMap[currentChar] = rightIndex
         }
 
-        maxLen = Math.max(maxLen, right - left +1)
-        tmpMap[str[right]] = right
-        right++
+        maxLen = Math.max(maxLen, rightIndex - leftIndex +1)
+        tmpMap[str[rightIndex]] = rightIndex  // since we are using Object and not Map.
+        rightIndex++
 
     }
 

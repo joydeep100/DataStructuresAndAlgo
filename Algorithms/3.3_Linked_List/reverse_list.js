@@ -1,3 +1,4 @@
+// https://www.youtube.com/watch?v=G0_I-ZF0S38&t=253s
 function ListNode(val, next) {
     this.val = (val === undefined ? 0 : val)
     this.next = (next === undefined ? null : next)
@@ -6,7 +7,7 @@ function ListNode(val, next) {
 
 var reverseList = function(head) {
 
-    /* say we have 1 -> 2 -> 3 -> null [1]
+    /* say we have 1 -> 2 -> 3 -> null       [1]
        we need 3 -> 2 -> 1 -> null
 
        so we just, add a null at the beginning of [1] and reverse the links

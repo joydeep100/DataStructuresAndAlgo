@@ -15,7 +15,7 @@ Output: 0
 Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0. */
 var largestAltitude = function (gain) {
 
-    let altitudes = new Array(gain.length + 1).fill(0)
+    let altitudes = new Array(gain.length + 1).fill(0) // in python altitudes = [0] * (len(gain) + 1)
     let currAlt = 0
     let max = 0
     /* if we set max = -Infinity then since we are not checking  "max = Math.max(max, currAlt)" for the i'th altitude

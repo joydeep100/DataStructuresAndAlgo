@@ -91,7 +91,7 @@ var threeSum2 = function (nums) {
         // let say sorted nums = [-3, -3, 1, 2, 3, 4]
         if (i !== 0 && nums[i] === nums[i - 1]) { // do not use it, at i = 1, we simply say skip this iteration
             continue
-            /* so basically duplicate can occur at two levels, first i here
+            /* so basically duplicacy can occur at two levels, first i here
             let say in the first for loop, we found that in the last loop we had same value in that case we need to skip it
             see, first time we should add it. but not second time right (that causes duplicacy)
             */

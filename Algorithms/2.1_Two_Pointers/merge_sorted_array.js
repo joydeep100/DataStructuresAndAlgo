@@ -1,5 +1,4 @@
-/*
-88. Merge Sorted Array
+/*88. Merge Sorted Array
 
 You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n,
 representing the number of elements in nums1 and nums2 respectively.
@@ -34,7 +33,6 @@ var merge = function(nums1, m, nums2, n) {
             // code works perfectly well even without that
             // but if we put this condition in the while (p1 >=0 && p2 >= 0) it completely messes up the logic
 
-
             nums1[i--] = nums1[p1--] // we can also do like this--, post decrement
             // p1--
             
@@ -53,3 +51,4 @@ var merge = function(nums1, m, nums2, n) {
 // console.log(merge([0], 0, [1], 1)) // good test case
 console.log(merge([4,0,0,0,0,0], 1, [1,2,3,5,6], 5)) // amazing test case
 
+// TODO add python solution. https://www.youtube.com/watch?v=P1Ic85RarKY

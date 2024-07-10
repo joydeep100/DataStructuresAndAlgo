@@ -1,4 +1,4 @@
-* need not be sorted
+* need not necessarily be sorted
 
 So sliding window works in something like this, like to slide a window
 

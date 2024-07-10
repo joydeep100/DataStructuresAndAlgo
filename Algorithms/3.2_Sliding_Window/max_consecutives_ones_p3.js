@@ -32,7 +32,7 @@ var longestOnes = function(nums, k) {
         a. incase its valid it wont even go inside while and gets updated
         b. incase its invalid then it tried to make it valid, if it fails then do no update right?
         */
-        while(countOfZeros > k){
+        while(countOfZeros > k){ // i think putting an if condition here also might work
             if (nums[left] === 0) countOfZeros--
             left++
         }
