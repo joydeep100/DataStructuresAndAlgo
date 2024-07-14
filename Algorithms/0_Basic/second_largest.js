@@ -1,18 +1,20 @@
-function SecondLargest(arr){
+function secondLargest(arr){
 
     if (arr.length < 2) return -1
 
     let largest = -Infinity
-    let SecondLargest = -Infinity
+    let secondLargest = -Infinity
 
     for(item of arr){
         if (item > largest){
-            SecondLargest = largest
+            secondLargest = largest
             largest = item
+        } else if (item > secondLargest && item < largest){
+            secondLargest = item
         }
     }
 
-    return SecondLargest
+    return secondLargest != -Infinity ? secondLargest : -1
 }
 
-console.log(SecondLargest([1,2,3,4,5]))
+console.log(secondLargest([9,9]))
