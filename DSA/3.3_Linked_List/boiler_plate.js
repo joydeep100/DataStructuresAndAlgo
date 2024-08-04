@@ -1,9 +1,9 @@
+// Helper code to run leetcode solutions locally
 function ListNode(val, next) {
     this.val = (val === undefined ? 0 : val)
     this.next = (next === undefined ? null : next)
 }
 
-// helper function needed to run leetcode problems locally
 function arrayToList(arr) {
     if (arr.length === 0) return null;
     let head = new ListNode(arr[0]);

@@ -52,6 +52,7 @@ var addTwoNumbers = function(l1, l2) {
     let dummy = new ListNode() // we are creating a new linked list to store the result
     let curr = dummy
     let carry = 0
+
     while(l1 || l2 || carry){
         const v1 = l1 ? l1.val : 0
         const v2 = l2 ? l2.val : 0
@@ -65,6 +66,9 @@ var addTwoNumbers = function(l1, l2) {
         curr = curr.next
         l1 = l1 ? l1.next : null
         l2 = l2 ? l2.next : null
+
+        // if we have a carry at this point then we need one more iteration 
+        // so we have carry also as one of the args in while
     }
 
     return dummy.next
