@@ -19,7 +19,7 @@ print(find_digits_str(123))  # [1, 2, 3]
 
 def find_digits_str_sum(number):
     return sum(int(digit) for digit in str(number))
-    # return sum([int(digit) for digit in str(number)]) we can with do this, but an iterable is what it matters
+    # return sum([int(digit) for digit in str(number)]) is also correct
 
 
 print(find_digits_str_sum(123))

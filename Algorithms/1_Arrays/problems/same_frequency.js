@@ -1,6 +1,8 @@
 function sameFrequency(m, n){
 
-    let m_s = m.toString() //mistake, forgot to use let and one of the test cases failed, since the test add "use strict"; at the top
+    let m_s = m.toString() 
+    // mistake, missed to use let and one of the test cases failed, 
+    // since the test add "use strict"; at the top
     let n_s = n.toString()
 
     if (m_s.length !== n_s.length) return false
@@ -30,5 +32,3 @@ function sameFrequency(m, n){
 
 console.log(sameFrequency(182,281)) // true
 // sameFrequency(34,14) // false
-// sameFrequency(3589578, 5879385) // true
-// sameFrequency(22,222) // false

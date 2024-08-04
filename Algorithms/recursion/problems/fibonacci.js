@@ -16,11 +16,8 @@ base condition => fib(0) = 0 & fib(1) = 1 as these are the starting point
 
 function fib(n){
 
-    if (n < 2) // can also be put as (n === 0 || n ===1)
+    if (n <= 1) // can also be put as (n === 0 || n ===1)
         return n
-
-    // very tricky, see this satisfies the base condition
-    // if fib(0) return 0 , if fib(1) return 1
 
     return fib(n-1) + fib(n-2)
 }

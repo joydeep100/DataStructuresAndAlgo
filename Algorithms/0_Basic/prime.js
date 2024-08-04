@@ -3,7 +3,7 @@ function prime(n){
     if (n < 0){
         return -1  // -ve no's cannot be a prime number
     }
-    if (n > 0 && n <= 1){
+    if (n == 0 || n == 1){
         return false // not a prime
     }
     for(let i=2; i<n; i++){

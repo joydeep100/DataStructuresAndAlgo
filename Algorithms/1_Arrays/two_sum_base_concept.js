@@ -65,7 +65,8 @@ function twoSum2pOrgIdx(nums, target) {
         // ***this is just creating another list, in which we also retain the original index***
     }
 
-    numsWithIndices = numsWithIndices.sort((a, b) => a.num - b.num) // we lost the original indexes, so lets return the pair value instead which sums to target
+    numsWithIndices = numsWithIndices.sort((a, b) => a.num - b.num) 
+    // we lost the original indexes, so lets return the pair value instead which sums to target
 
     let left = 0
     let right = n - 1

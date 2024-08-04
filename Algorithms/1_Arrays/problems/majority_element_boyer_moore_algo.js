@@ -1,7 +1,7 @@
 /* 169. Majority Element
 Given an array nums of size n, return the majority element.
-
-The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+The majority element is the element that appears more than ⌊n / 2⌋ times. 
+You may assume that the majority element always exists in the array.
 
 Example 1:
 Input: nums = [3,2,3]
@@ -10,7 +10,6 @@ Output: 3
 Example 2:
 Input: nums = [2,2,1,1,1,2,2]
 Output: 2
-
 so element should appear more than n/2 times where n is the length of the array.
 */
 
@@ -92,8 +91,3 @@ function majorityElementBM(nums) {
 // console.log(majorityElementBF([2, 2, 1, 1, 1, 2, 2]))
 // console.log(majorityElementHM([2, 2, 1, 1, 1, 2, 2]))
 console.log(majorityElementBM([2, 2, 1, 1, 1, 2, 2]))
-
-
-{[( ) ] }
-    
-stack = [ '(', '[' , '{' ]
