@@ -6,7 +6,7 @@ abc
 j
 */
 
-function isSubsequence(s, t) {
+function isSubsequence(s, t) { // non-congruent
 
   let count = 0
   let j = 0
@@ -15,16 +15,9 @@ function isSubsequence(s, t) {
       count++
       j++
     }
-    // smart to put the break here like this instead of at the end
-    // if (count === s.length) return true
   }
 
-  /* but smart technique has one major flaw, imageine s="" and t=""
-  then it would never enter the for loop so it is best to take the if condition out of the loop
-
-  */
   if (count === s.length) return true
-  // mistake did t.length
   else return false
 
   // or can do return (j === s.length) ? true : false

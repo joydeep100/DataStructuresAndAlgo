@@ -54,4 +54,4 @@ function binarySearchRecursiveWrapper(arr, n) {
 }
 
 console.log(binarySearchRecursiveWrapper([1, 2, 3, 4, 5], 2))
-console.log(binarySearchRecursiveWrapper([2], 2))
+// console.log(binarySearchRecursiveWrapper([2], 2))

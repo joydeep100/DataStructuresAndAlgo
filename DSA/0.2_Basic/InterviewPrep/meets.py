@@ -16,5 +16,3 @@ def meets(s1, s2):
 # print(meets(620, 260))
 # print(meets(31, 13))
 print(meets(1711, 1117))
-
-'''Looks like only those numbers will meet whose digit frequency is same, but not totally sure'''

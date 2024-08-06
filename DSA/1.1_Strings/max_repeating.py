@@ -6,26 +6,34 @@ If word is not a substring of sequence, word's maximum k-repeating value is 0.
 Given strings sequence and word, return the maximum k-repeating value of word in sequence.
 '''
 def maxRepeating(sequence, word):
-    # My solution
-    left = 0
-    res = 0
-    ls = len(sequence)
-    lw = len(word)
-    while left + lw <= ls:
 
-        if sequence[left : left + lw] == word:
-            res += 1
-            left += lw
+    left = 0
+    len_of_seq = len(sequence)
+    len_of_word = len(word)
+
+    count = 0
+    max_len = 0
+    
+    while left < len_of_seq - len_of_word:
+
+        if sequence[left:left + len_of_word] == word:
+            count += 1
+            left += len_of_word
         else:
             left += 1
+            count = 0
+        if count > max_len:
+            max_len = count
 
-    return res
+    return max_len
 
-print(maxRepeating('aaabaaaabaaabaaaabaaaabaaaabaaaaba', 'aaaba'))
+# print(maxRepeating('aaabaaaabaaabaaaabaaaabaaaabaaaaba', 'aaaba'))
 # a a a b a a a a b a a  a  b  a  a  a  a  b  a  a  a  a  b  a  a  a  a  b  a  a  a  a  b  a
 # 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33
 
-''' This failed one of the test cases because we need congruent (k-repeating) sequence
+''' This failed just two test case of the test cases because we need congruent (k-repeating) sequence
+TC1 - a , a
+TC2 - aaabaaaabaaabaaaabaaaabaaaabaaaaba, aaaba
 aaaba 0 5
 aaaba 5 10 <--
 aaaba 14 19 <--
@@ -46,5 +54,4 @@ def maxRepeatingCorrect(sequence, word):
 
     return res
 
-print(maxRepeatingCorrect('ababc', 'ab'))
-print(maxRepeatingCorrect('aaabaaaabaaabaaaabaaaabaaaabaaaaba', 'aaaba')) # 5 is correct o/p
+# print(maxRepeatingCorrect('aaabaaaabaaabaaaabaaaabaaaabaaaaba', 'aaaba')) # 5 is correct o/p

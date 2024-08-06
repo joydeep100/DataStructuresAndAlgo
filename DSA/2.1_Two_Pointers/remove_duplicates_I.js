@@ -9,27 +9,27 @@ The remaining elements of nums are not important as well as the size of nums.
 Return k.
 */
 
-let removeDuplicates = function(nums) {
+let removeDuplicates = function (nums) {
 
     /*
-    set i = 1, j = 1 since first element is alwways sorted in a sorted array
-    now comaprision is j === j-1, if so j++
+    set left = 1, right = 1 since first element is alwways sorted in a sorted array
+    now comaprision is right === right-1, if so right++
     else it means values are diff
-    now swap i and j values and increment i
+    now swap left and right values and increment left
 
-       i
+       left
     [0,0,1,1,1,2,2,3,3,4]
-       j
+       right
     */
-    let i = 1
-    for(let j=1;j < nums.length;j++){
+    let left = 1
+    for (let right = 1; right < nums.length; right++) {
 
-        if (nums[j] !== nums[j-1]){
-            nums[i] = nums[j]
-            i++
-        } 
+        if (nums[right] !== nums[right - 1]) {
+            nums[left] = nums[right]
+            left++
+        }
     }
-    return i
+    return left
 };
 
-removeDuplicates([0,0,1,1,1,2,2,3,3,4]) //o/p 5
+console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])) //o/p 5

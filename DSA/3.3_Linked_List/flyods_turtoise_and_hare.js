@@ -47,7 +47,8 @@ function isListCycleFloyd(head){
     /* This is Floyd's Tortoise and Hare Algo
     so the logic is, we point 2 pointers (slow & fast to head)
     we increment slow by one node, and increment fast by 2 nodes
-    if there is a cycle then slow and fast will have to meet, if there is not then fast will reach tail (null) and end the  traversal
+    if there is a cycle then slow and fast will have to meet, 
+    if there is not then fast will reach tail (null) and end the  traversal
     */
     let slow = head, fast = head
 

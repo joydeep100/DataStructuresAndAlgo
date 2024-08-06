@@ -19,10 +19,10 @@ is sorted. 𝑂(n^2)
             }
         }
         [arr[i], arr[min]] = [arr[min], arr[i]]
-        
+        // arr[i], arr[min] = arr[min], arr[i] python equivalent
+
     }
     return arr
 }
-
 
 console.log(selectionSort([7,2,3,10,-1,0,5]))
