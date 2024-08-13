@@ -19,26 +19,26 @@ Explanation: Starting with nums = [3,1,3,4,3]:
 There are no more pairs that sum up to 6, hence a total of 1 operation.
 '''
 
+def maxOperations(nums, k):
 
-class Solution:
-    def maxOperations(self, nums: List[int], k: int) -> int:
+    left = 0
+    right = len(nums) - 1
+    res = 0
 
-        left = 0
-        right = len(nums) - 1
-        res = 0
+    # if i did not sort some tests were failing. *** IMP ***
+    nums = sorted(nums)
 
-        # if i did not sort some tests were failing. *** IMP ***
-        nums = sorted(nums)
+    while left < right:
 
-        while left < right:
+        if nums[left] + nums[right] > k:
+            right -= 1
+        elif nums[left] + nums[right] < k:
+            left += 1
+        else:
+            res += 1
+            left += 1
+            right -= 1
 
-            if nums[left] + nums[right] > k:
-                right -= 1
-            elif nums[left] + nums[right] < k:
-                left += 1
-            else:
-                res += 1
-                left += 1
-                right -= 1
+    return res
 
-        return res
+print(maxOperations([3,1,3,4,3], 6))

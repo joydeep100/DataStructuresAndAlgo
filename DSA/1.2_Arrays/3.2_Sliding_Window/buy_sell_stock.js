@@ -22,9 +22,9 @@ var maxProfit = function(prices) {
     let r = 1
     let maxProfit = 0
 
-    while(r < prices.length){
+    while (r < prices.length) {
 
-        if (prices[l] > prices(r)){
+        if (prices[l] > prices[r]) {
             l = r
         } else {
             maxProfit = Math.max(maxProfit, prices[r] - prices[l])
@@ -34,8 +34,7 @@ var maxProfit = function(prices) {
     }
 
     return maxProfit
-    
-};
 
+};
 
 console.log(maxProfit([7,1,5,3,6,4]))

@@ -9,22 +9,18 @@ Example 1:
 Input: flowerbed = [1,0,0,0,1], n = 1
 Output: true
 '''
-from typing import List
+def canPlaceFlowers(flowerbed, n):
+    f = [0] + flowerbed + [0]
 
-class Solution:
-    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+    for i in range(1, len(f) - 1): # since its index
 
-        f = [0] + flowerbed + [0]
+        if f[i] == 0 and f[i - 1] == 0 and f[i + 1] == 0:
+            f[i] = 1
+            n -= 1
 
-        for i in range(1, len(f) - 1): # since its index
+    return True if n <= 0 else False
 
-            if f[i] == 0 and f[i - 1] == 0 and f[i + 1] == 0:
-                f[i] = 1
-                n -= 1
-
-        return True if n <= 0 else False
-    
-print(Solution().canPlaceFlowers([1,0,0,0,1], 1))
+print(canPlaceFlowers([1,0,0,0,1], 1))
 
 ''' There are lot of edge case, easy trick to smash this problem would be to add a 0 on left and right side.
 '''

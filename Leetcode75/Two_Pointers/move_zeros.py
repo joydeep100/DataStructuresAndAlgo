@@ -3,7 +3,7 @@
 Input: nums = [0,1,0,3,12]
 Output: [1,3,12,0,0]
 '''
-
+from typing import List
 
 class Solution:
     def moveZeroes2(self, nums: List[int]) -> None:
@@ -31,3 +31,5 @@ class Solution:
                 write_idx += 1
 
         return nums
+
+# refer DSA/0.4_InterviewPrep/shift_left_right_imp.py for cleaner code

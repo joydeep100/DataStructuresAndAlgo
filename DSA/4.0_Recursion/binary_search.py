@@ -6,9 +6,11 @@ def binary_search_recursive(data, target, low, high):
     if (target > data[mid]):  # should not be target > mid
         return binary_search_recursive(data, target, mid+1, high)
     elif (target < data[mid]):
-        return binary_search_recursive(data, target, 0, mid)
+        return binary_search_recursive(data, target, low, mid - 1)
     else:
         return mid
+
+# print(binary_search_recursive([1, 2, 3], 3, 0, 2))
 
 # binary search iterative
 
@@ -22,10 +24,10 @@ def binary_search(arr, n):
 
         mid = (left + right)//2  # mistake did len(arr)//2
 
-        if n > arr[mid]:
-            left = mid + 1  # just one side we need to update
+        if n > arr[mid]:  # compare against value not index
+            left = mid + 1  # see since value is greater, obiously it will be at-least one index forward right!
         elif n < arr[mid]:
-            right = mid
+            right = mid - 1
         else:
             return mid
 

@@ -2,7 +2,7 @@ function areThereDuplicates(...arr) {
     // using ... spread i can convert the args into an array
 
     // its very simple to use a frequency counter here
-    // but let us try to use 
+    // but let us try to use two pointers
     if (!arr.length) return undefined
 
     arr.sort() //making sure that the arr is sorted

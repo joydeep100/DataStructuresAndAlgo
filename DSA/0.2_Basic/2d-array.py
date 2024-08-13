@@ -9,3 +9,6 @@ print(arr) # [[1, 0], [1, 0], [1, 0], [1, 0]]
 # this is the correct way to initiaize 2d array
 arr2 =  [[0] * 2 for i in range(4)]
 print(arr2) # [[0, 0], [0, 0], [0, 0], [0, 0]]
+
+# Array Concatenation
+print([0] + [1]) # [0, 1]

@@ -8,10 +8,13 @@ def removeDuplicates(nums):
     while(i < len(nums)):
         curr = nums[i]
         count = 0
+
+        # count the number of current item
         while(i < len(nums) and nums[i] == curr):
             count += 1
             i += 1
 
+        # wrtie at most 2 items
         for _ in range(min(2, count)):
             nums[write_idx] = curr
             write_idx += 1

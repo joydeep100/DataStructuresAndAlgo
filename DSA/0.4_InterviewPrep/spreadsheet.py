@@ -68,4 +68,3 @@ res.set_cell("D5", "30")
 res.set_cell("C2", "=A1+B1+D5")
 res.set_cell("A1", "100")
 print(res.get_value("C2"))
-
