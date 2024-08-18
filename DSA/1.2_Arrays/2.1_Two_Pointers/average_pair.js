@@ -1,10 +1,14 @@
 function averagePair(arr, avg_input) {
 
+    // The average of 2 adjacent elements in an array should be eq to the value passed
+    // has to be a sorted array
+
     if (!arr.length) return false
 
     let avg = 0
     let i = 0
     let j = 1
+    // can be done using a single pointer as well
 
     // by using while loop we can also check for the secondary exit condition 
     // once that hits no need to further continue the loop
@@ -18,9 +22,6 @@ function averagePair(arr, avg_input) {
 
     return false
 }
-
-// The average of 2 adjacent elements in an array should be eq to the value passed
-// has to be a sorted array
 
 // console.log(averagePair([1, 2, 3, 4, 5, 6, 7], 3.50)) // true
 console.log(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) // false

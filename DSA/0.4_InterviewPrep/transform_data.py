@@ -9,8 +9,10 @@ res = defaultdict(list)
 
 for list_name, items in data.items():
     for index, item in enumerate(items):
-        # if item not in res:        able to skip this since we are using defaultdict
-        #     res[item] = []
+        '''
+        if item not in res:        # able to skip this since we are using defaultdict
+        res[item] = []
+        '''
         res[item].append({'list': list_name, 'position': index})
 
 print(res)

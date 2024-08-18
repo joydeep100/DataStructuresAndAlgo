@@ -1,4 +1,4 @@
-/* From left to right, in each iteration compary first 2 elements (if not sorted, swap them)
+/* From left to right, in each iteration compare first 2 elements (if not sorted, swap them)
 we need to repeat this process for n times.
 
 

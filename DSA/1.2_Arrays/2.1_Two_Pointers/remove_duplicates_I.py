@@ -1,6 +1,6 @@
 def removeDuplicates(nums):
     left, right = 0, 0    
-    # My solution
+    # My initial solution
     while right < len(nums):
         if nums[right] != nums[left]:
             left += 1
@@ -13,25 +13,19 @@ def removeDuplicates(nums):
 
 # Better solution
 def removeDuplicatesB(nums):
-    '''
-       i 
-    [0,0,1,1,1,2,2,3,3,4]
-       j
-       i 
-    [0,0,1,1,1,2,2,3,3,4]
-         j
-         i 
-    [0,1,1,1,1,2,2,3,3,4]
-               j
-    '''
+
     left = 1
 
     for right in range(1, len(nums)):
 
         if nums[right] != nums[right-1]:
             nums[left] = nums[right]  
-            # so the trick is that we do not swap but we assign it to nums[left] so nums[right]
-            # does not change.. hmm!
+
+            ''' first item will anyways be sorted
+            its better to check backwards
+            the trick is that we do not swap but we assign it to nums[left] so nums[right]
+            does not change.. '''
+
             left += 1
 
     return nums[:left]
