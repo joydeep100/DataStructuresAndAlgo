@@ -1,5 +1,3 @@
-# Your previous Plain Text content is preserved below:
-
 # You are implementing the computation & storage component of a spreadsheet
 # (think Excel or Google Sheets). You have a UI developer who will be
 # responsible for, well, User Interaction (rendering, handling user input,
@@ -68,3 +66,48 @@ res.set_cell("D5", "30")
 res.set_cell("C2", "=A1+B1+D5")
 res.set_cell("A1", "100")
 print(res.get_value("C2"))
+
+class Spreadsheet:
+
+    def __init__(self):
+        self.data = {}
+
+    def sum_cells(self, cells_list):
+        result = []
+        for cell in cells_list:
+            if isinstance(cell, list):
+                result.append(self.sum_cells(cell))
+            else:
+                result.append(self.get_value(cell))  
+        return sum(result)
+
+    def set_cell(self, position, value):
+        if value[0] == '=':
+            # Parse the formula, removing spaces
+            cells = [cell.strip() for cell in value[1:].split('+')]
+            self.data[position] = cells
+        else:
+            self.data[position] = int(value)
+
+    def get_value(self, position):
+        if position in self.data:
+            if isinstance(self.data[position], list):
+                return self.sum_cells(self.data[position])
+            else:
+                return self.data[position]
+        else:
+            raise ValueError(f"Data is missing in position {position}")
+
+res = Spreadsheet()
+
+# TC1
+res.set_cell("C1", "45")
+print(res.get_value("C1"))  # Output: 45
+
+# TC2
+res.set_cell("A1", "5")
+res.set_cell("B1", "20")
+res.set_cell("D5", "30")
+res.set_cell("C2", "=A1+B1+D5")
+res.set_cell("A1", "=C2+A1+A1")
+print(res.get_value("C2"))  # Output: 155 

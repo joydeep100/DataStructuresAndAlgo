@@ -2,8 +2,7 @@ from collections import defaultdict
 
 data = {
     "list1": ['joy', 'deep'],
-    "list2": ['emma', 'watson', 'joy']
-}
+    "list2": ['emma', 'watson', 'joy']}
 
 res = defaultdict(list)
 
@@ -11,7 +10,10 @@ for list_name, items in data.items():
     for index, item in enumerate(items):
         '''
         if item not in res:        # able to skip this since we are using defaultdict
-        res[item] = []
+            res[item] = []
+
+        and then
+        res[item].append(<whatever>) and not res[item] = res[item].append(<whatever>)
         '''
         res[item].append({'list': list_name, 'position': index})
 

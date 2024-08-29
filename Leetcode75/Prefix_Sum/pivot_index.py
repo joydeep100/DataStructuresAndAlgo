@@ -21,7 +21,7 @@ class Solution:
             prev += nums[i]
 
         for i in range(length):
-            # incase left and right are going out of bouds we should handle it here
+            # incase left and right are going out of bounds we should handle it here
             left, right = 0, 0
             if i > 0 and i < length:
                 left = pref[i-1]

@@ -12,7 +12,6 @@ var reverseList = function(head) {
 
        so we just, add a null at the beginning of [1] and reverse the links
     */
-
     let prev = null, curr = head
     let nxt
     while(curr){
@@ -20,7 +19,6 @@ var reverseList = function(head) {
         curr.next = prev // pointing it reverse
         prev = curr
         curr = nxt // using [1] here
-
     }
 
     // so when curr will point at null, then prev would point to last but one (i.e. (3)) which is our new head

@@ -9,21 +9,6 @@ Output: ""
 Explanation: There is no common prefix among the input strings.
 '''
 
-def longestCommonPrefixSort(strs):
-    # O(nlogn)
-    sorted_srts = sorted(strs, key=len)
-    res = ''
-    for i in range(len(sorted_srts[0])):
-
-        for k in range(1, len(sorted_srts)):
-
-            if sorted_srts[0][i] != sorted_srts[k][i]:
-                return res
-        
-        res += sorted_srts[0][i]
-
-    return res
-
 def longestCommonPrefix(strs):
     # O(n) Best case
     

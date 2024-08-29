@@ -4,10 +4,10 @@ def find_digits(number):
     while (number > 0):
         digits.append(number % 10)
         number = number // 10
-    return digits
+    return digits[::-1]
 
 
-print(find_digits(123))  # [3, 2, 1]
+print(find_digits(123))  # [1, 2, 3]
 
 
 def find_digits_str(number):

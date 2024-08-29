@@ -11,4 +11,4 @@ def compute_closest_to_zero(ts):
 
     return ts[closest_idx]
 
-print(compute_closest_to_zero([-10, -10]))
+print(compute_closest_to_zero([-10, -10, 11, 9, -8])) # -8

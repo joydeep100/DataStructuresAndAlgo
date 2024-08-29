@@ -22,8 +22,6 @@ print(fibdp(5))
 
 
 def fact(n):
-    if (n < 0):
-        return None    # note factorial of -ve numbers do not exist
     if (n == 0 or n == 1):
         return 1
     else:
@@ -31,13 +29,9 @@ def fact(n):
 
 
 print(fact(5))  # 120
-# print(fact(-20))  # None
 
 # fact iterative
 def fact(n):
-    # error conditons are same
-    if (n < 0):
-        return None    # note factorial of -ve numbers do not exist
     if (n == 0 or n == 1):
         return 1
     

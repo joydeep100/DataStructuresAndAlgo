@@ -59,7 +59,7 @@ function mergeSort(arr){
 
     if (arr.length <= 1) return arr
     let mid = Math.floor(arr.length / 2)
-    let left = mergeSort(arr.slice(0, mid))   //vvi, in slice till mid means it does not include mid right.
+    let left = mergeSort(arr.slice(0, mid))   //slice till mid means it does not include mid right.
     let right = mergeSort(arr.slice(mid))
 
     return merge(left, right)
@@ -67,23 +67,3 @@ function mergeSort(arr){
 }
 
 console.log(mergeSort([1,10,3,2,7,8,6,1]))
-
-/* implementation using queue
-
-function mergeSortIterative(arr) {
-    if (arr.length <= 1) return arr;
-
-    // Create a queue where each element is an array containing a single element from the original array
-    let queue = arr.map(item => [item]);
-
-    while (queue.length > 1) {
-        let left = queue.shift();
-        let right = queue.shift();
-
-        queue.push(merge(left, right));
-    }
-
-    return queue[0];
-}
-
-*/

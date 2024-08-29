@@ -15,7 +15,7 @@ def removeDuplicates(nums, k):
             i += 1
 
         # write at most 2 items
-        for _ in range(min(2, count)):
+        for _ in range(min(k, count)):
             nums[write_idx] = curr
             write_idx += 1
 

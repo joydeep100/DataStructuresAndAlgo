@@ -9,7 +9,7 @@ class Node{
 class BinarySearchTree{
     constructor(){
         this.root = null
-        // there is no size / length
+        // there is no size / camlength
     }
 
     insert(value){

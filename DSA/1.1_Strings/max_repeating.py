@@ -5,7 +5,7 @@ If word is not a substring of sequence, word's maximum k-repeating value is 0.
 
 Given strings sequence and word, return the maximum k-repeating value of word in sequence.
 '''
-def maxRepeating(sequence, word):
+def maxRepeatingWR(sequence, word):
 
     left = 0
     len_of_seq = len(sequence)
@@ -44,7 +44,7 @@ aaaba 29 34
 see how from 10 to 14th index there is a gap
 '''
 
-def maxRepeatingCorrect(sequence, word):
+def maxRepeating(sequence, word):
 
     res = 0
     k = 1
@@ -54,4 +54,4 @@ def maxRepeatingCorrect(sequence, word):
 
     return res
 
-# print(maxRepeatingCorrect('aaabaaaabaaabaaaabaaaabaaaabaaaaba', 'aaaba')) # 5 is correct o/p
+# print(maxRepeating('aaabaaaabaaabaaaabaaaabaaaabaaaaba', 'aaaba')) # 5 is correct o/p

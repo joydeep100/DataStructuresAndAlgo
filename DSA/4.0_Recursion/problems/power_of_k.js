@@ -1,8 +1,7 @@
 var isPowerOfTwo = function (n) {
+    if (n <= 0) return false
     if (n === 1) return true
-    if (n <= 0) return false // chatGpt points that we need to hanle -ve nos as they cannot power up to 2
     if (n % 2 !== 0) return false
-
     return isPowerOfTwo(Math.floor(n / 2))
 };
 
@@ -11,9 +10,8 @@ console.log(isPowerOfTwo(-12))
 
 // This code is more readable!!
 var isPowerOfTwoR = function (n) {
-    if (n === 1) return true
     if (n <= 0) return false
-
+    if (n === 1) return true
     return ((n % 2 === 0) && isPowerOfTwoR(Math.floor(n / 2)))
 }
 

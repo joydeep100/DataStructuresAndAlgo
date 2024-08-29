@@ -2,9 +2,7 @@ def strStr(haystack, needle):
 
     # Find index of first occurance of substring in string
 
-    i = 0
     j = 0
-
     count = 0
     ''' l = 9, last_index = 8
     sadbutsad
@@ -21,9 +19,9 @@ def strStr(haystack, needle):
         # now we also want to return the starting index where we find the match
 
         if count == len(needle):
-            return True, i + 1 - len(needle)
+            return True
 
-    return False, -1
+    return False
 
 print(strStr('oyesadbutsad', 'sad'))
 print(strStr('sadbutsad', 'sad'))

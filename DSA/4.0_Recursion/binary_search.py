@@ -4,7 +4,7 @@ def binary_search_recursive(data, target, low, high):
         return -1
     mid = (high + low)//2   # made a mistake of taking high - low
     if (target > data[mid]):  # should not be target > mid
-        return binary_search_recursive(data, target, mid+1, high)
+        return binary_search_recursive(data, target, mid + 1, high)
     elif (target < data[mid]):
         return binary_search_recursive(data, target, low, mid - 1)
     else:

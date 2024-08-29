@@ -42,7 +42,8 @@ var findAnagrams = function(s, p) {
     for(let right=p.length ; right < s.length; right++){
 
         // we just remove one from left, add one to right
-        // (EC) now in case after removing left one we have a {a: 0} in sMap then it wont be there in ther pMap so we delete the key
+        // (EC) now in case after removing left one we have a {a: 0} in sMap 
+        // then it wont be there in ther pMap so we delete the key
         sMap[s[left]] -= 1
         if (sMap[s[left]] === 0) delete sMap[s[left]]
         left++

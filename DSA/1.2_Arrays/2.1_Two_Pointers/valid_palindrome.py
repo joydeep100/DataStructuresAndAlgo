@@ -4,7 +4,7 @@ def validPalindrome(chars):
     left = 0
     right = l - 1
 
-    while (left <= right):
+    while (left < right):
 
         if chars[left] != chars[right]:
             return False

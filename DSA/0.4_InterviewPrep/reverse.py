@@ -1,11 +1,16 @@
 def reverseList(arr):
     '''Reverse a list using recursion'''
-    if not arr: # handle boundary conditions
-        return []
-    if len(arr) == 1:
+    if len(arr) <= 1:
         return arr # we can also return [arr[0]] 
+    
+    ''' Another approach
+        if len(arr) <= 1:
+            return arr
+        return [arr[-1]] + reverseList(arr[:-1])
+    '''
 
-    return reverseList(arr[1:]) + [arr[0]] # note [arr[0]], otherwise it would be addition of list items right
+    return reverseList(arr[1:]) + [arr[0]] # 
+    # note reverseList(arr[1:]) + arr[0], else it would be 
 
 # print(reverseList([]))
 # print(reverseList([1]))

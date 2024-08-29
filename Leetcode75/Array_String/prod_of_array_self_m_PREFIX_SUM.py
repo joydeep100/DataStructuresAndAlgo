@@ -11,7 +11,6 @@ Input: nums = [-1,1,0,-3,3]
 Output: [0,0,9,0,0] '''
 from typing import List
 
-
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         n = len(nums)
@@ -35,7 +34,10 @@ class Solution:
         ''' nums = [1, 2, 3, 4]
             pref = [1, 2, 6, 24]
             suff = [24, 24, 12, 4]
-        lets consider index 0 = 1, its res should be rhs of suff
+
+            Input:  [1,2,3,4]
+            Output: [24,12,8,6]
+        lets consider index 0 = 1, its res should be 1 * rhs of suff
         and for index 1 = 2, its res should be lhs of pref (1) * rhs of suff (12) = 12
         '''
         for i in range(len(nums)):
