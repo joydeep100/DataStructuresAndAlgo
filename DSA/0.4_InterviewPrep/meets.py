@@ -1,4 +1,5 @@
-def digit_sum(n):
+def nxt_num(n):
+    # sum of n + all its digits
     return n + sum(int(digit) for digit in str(n))
 
 def meets(s1, s2):
@@ -7,9 +8,9 @@ def meets(s1, s2):
         if (s1 == s2):
             return True
         elif s1 < s2:
-            s1 = digit_sum(s1)
+            s1 = nxt_num(s1)
         else:
-            s2 = digit_sum(s2)
+            s2 = nxt_num(s2)
         count += 1
     return False
 

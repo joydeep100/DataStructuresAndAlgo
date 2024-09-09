@@ -71,7 +71,7 @@ MinStack.prototype.pop = function() {
 
 /**
  * @return {number}
- */
+*/
 MinStack.prototype.top = function() {
     return this.stack.slice(-1)[0]
 };

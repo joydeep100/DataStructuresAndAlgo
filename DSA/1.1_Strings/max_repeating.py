@@ -46,12 +46,12 @@ see how from 10 to 14th index there is a gap
 
 def maxRepeating(sequence, word):
 
-    res = 0
+    count = 0
     k = 1
-    while word * k in sequence:
-        res = k
+    while (word * k) in sequence:
         k += 1
+        count += 1
 
-    return res
+    return count
 
-# print(maxRepeating('aaabaaaabaaabaaaabaaaabaaaabaaaaba', 'aaaba')) # 5 is correct o/p
+print(maxRepeating('aaabaaaabaaabaaaabaaaabaaaabaaaaba', 'aaaba')) # 5 is correct o/p

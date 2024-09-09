@@ -7,28 +7,35 @@ def fib(n):
         return fib(n-1) + fib(n-2)
 
 # using memoization
-
-
-def fibdp(n, computed={0: 0, 1: 1}):
+def fibDp(n, computed={0: 0, 1: 1}):
     if n not in computed:
-        computed[n] = fibdp(n-1, computed) + fibdp(n-2, computed)
+        computed[n] = fibDp(n-1, computed) + fibDp(n-2, computed)
 
     return computed[n]
 
-
-print(fibdp(5))
+print(fibDp(5))
 
 # factorial 5! = 5*4*3*2*1 ; 0! = 1 , 1! = 1
 
-
 def fact(n):
-    if (n == 0 or n == 1):
+    if (n <= 1):
         return 1
     else:
         return n * fact(n-1)
 
-
 print(fact(5))  # 120
+
+def factorialDp(n, computed={}):
+
+    if n <= 1:
+        return 1
+    
+    if n not in computed:
+        computed[n] = n * factorialDp(n - 1, computed)
+    
+    return computed[n]
+
+print(factorialDp(5))
 
 # fact iterative
 def fact(n):

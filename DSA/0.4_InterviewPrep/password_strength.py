@@ -5,6 +5,7 @@ def multi_password_strength_counter(passwords):
 
     for password in passwords:
 
+        # imp, placement of this dict
         dict = {
             "has_length": False,
             "has_digit": False,
@@ -24,12 +25,11 @@ def multi_password_strength_counter(passwords):
             if char.islower():
                 dict["has_lower"] = True
             if char in special_characters:
-                dict["has_spl"] = True
+                dict["has_spl"] = True 
 
         res.append(all(dict.values()))
         
     return res
-
 
 passwords = ["password", "Pa$$w0rd", "SuperSecurePwd!", "weakpw"]
 results = multi_password_strength_counter(passwords)

@@ -11,8 +11,8 @@ Explanation: 'a' and 'e' in 'alex' were long pressed.
 '''
 def isLongPressedName(name, typed):
 
-    i = 0
-    k = 0
+    i = 0 # pointer for name
+    k = 0 # pointer for typed
 
     while k < len(typed):
         # if both are same its great

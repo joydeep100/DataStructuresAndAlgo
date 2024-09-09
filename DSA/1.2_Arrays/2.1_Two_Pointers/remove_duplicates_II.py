@@ -3,7 +3,7 @@
 def removeDuplicates(nums, k):
 
     i = 0
-    write_idx = 0
+    ptr = 0
 
     while(i < len(nums)):
         curr = nums[i]
@@ -14,12 +14,12 @@ def removeDuplicates(nums, k):
             count += 1
             i += 1
 
-        # write at most 2 items
+        # write at most k items
         for _ in range(min(k, count)):
-            nums[write_idx] = curr
-            write_idx += 1
+            nums[ptr] = curr
+            ptr += 1
 
-    return nums[:write_idx]
+    return nums[:ptr]
 
 print(removeDuplicates([1,1,1,2,2,3], 2))
 

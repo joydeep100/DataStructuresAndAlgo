@@ -25,7 +25,7 @@ def isIsomorphic(s, t):
 
     for i in range(len(s)):
         if s[i] not in map:
-            map[s[i]] = t[i] # because of the order
+            map[s[i]] = t[i] #because of the order
             
             # To handle this condition - No two characters may map to the same character
             if t[i] in uniq_t_vals:

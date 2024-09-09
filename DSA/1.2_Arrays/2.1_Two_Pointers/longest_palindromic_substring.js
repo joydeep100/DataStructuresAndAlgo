@@ -58,6 +58,4 @@ console.log(longestPalindrome('abab')) // aba
     now l=b, r=b, now we expand both ways and since s[l] == s[r]... we store this string and also update the lenght
 
     basically we continue this process.
-
-
 */
