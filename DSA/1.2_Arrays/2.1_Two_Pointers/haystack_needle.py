@@ -4,10 +4,6 @@ def strStr(haystack, needle):
 
     j = 0
     count = 0
-    ''' l = 9, last_index = 8
-    sadbutsad
-          sad
-    '''
     for i in range(len(haystack) - len(needle)):
 
         if haystack[i] == needle[j]:
@@ -18,7 +14,7 @@ def strStr(haystack, needle):
 
         # now we also want to return the starting index where we find the match
 
-        if count == len(needle):
+        if j == len(needle):
             return True
 
     return False
