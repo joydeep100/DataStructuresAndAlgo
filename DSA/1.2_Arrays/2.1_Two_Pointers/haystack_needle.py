@@ -1,14 +1,13 @@
 def strStr(haystack, needle):
     
     j = 0
-    for i in range(len(haystack) - len(needle)):
+    for i in range(len(haystack)):
 
         if haystack[i] == needle[j]:
             j += 1
         else:
             j = 0
 
-        # now we also want to return the starting index where we find the match
         if j == len(needle):
             return True
 
