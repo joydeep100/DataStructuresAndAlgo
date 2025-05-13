@@ -1,4 +1,4 @@
-def slarge(list):
+def sec_largest(list):
 
     if len(list) < 1: return -1
 
@@ -14,12 +14,11 @@ def slarge(list):
 
     return s_largest if s_largest != float('-inf') else -1
 
-print(slarge([1,2,3,4,-1]))
+print(sec_largest([1,2,3,4,-1]))
 
 def sec_smallest(list):
 
-    smallest = float('inf')
-    sec_smallest = float('inf')
+    smallest, sec_smallest = float('inf'), float('inf')
 
     for number in list:
 
