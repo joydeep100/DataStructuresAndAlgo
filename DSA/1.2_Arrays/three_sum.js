@@ -50,6 +50,7 @@ var threeSum = function (nums) {
         left = i + 1
         right = nums.length - 1
 
+        // this part is 2 sum
         while (left < right) {
             tmpSum = nums[i] + nums[left] + nums[right]
             if (tmpSum > 0) {
