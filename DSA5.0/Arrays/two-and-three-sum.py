@@ -54,3 +54,51 @@ class Solution:
 
 sol = Solution()
 print(sol.twoSum([2,7,11,15], 9)) # [1,2] p.s. - Expected index starting from 1
+
+class Solution:
+    """
+    15. 3Sum
+
+    Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k,
+    and nums[i] + nums[j] + nums[k] == 0.
+
+    Notice that the solution set must not contain duplicate triplets.
+    """
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+
+        # we need to sort to handle duplicates
+        nums.sort()
+        n = len(nums)
+        res = []
+
+        for i in range(n):
+            # take one element and then do 2 sum for the rest
+
+            # for second element onward, if it was same as first on then skip (for the outer loop)
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+
+            # this part is 2 sum
+            l, r = i + 1, n - 1
+            while l < r:
+                three_sum = nums[i] + nums[l] + nums[r]
+                if three_sum == 0:
+                    res.append([nums[i], nums[l], nums[r]])
+                    l += 1
+
+                    # here is the tricky part https://youtu.be/jzZsG8n2R9A?t=607
+                    # for second element onward, if it was same as first on then skip (for the inner loop)
+                    # since we need unique triplets
+                    while l < r and nums[l] == nums[l - 1]:
+                        l += 1
+
+                elif three_sum > 0:
+                    r -= 1
+                else:
+                    l += 1
+
+        return res
+
+sol = Solution()
+print(sol.threeSum(nums = [-1,0,1,2,-1,-4]))  # [[-1, -1, 2], [-1, 0, 1]]
+
