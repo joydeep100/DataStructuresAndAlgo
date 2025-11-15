@@ -1,4 +1,4 @@
-def prefixSum(nums):
+def prefix_Suff_Sum(nums):
     length = len(nums)
 
     pref, suff = [0] * length, [0] * length
@@ -13,11 +13,11 @@ def prefixSum(nums):
         suff[i] = nums[i] + prev
         prev += nums[i]
 
-    return nums, pref, suff
+    return (pref, suff)
 
-print(prefixSum([1, 7, 3, 6, 5, 6]))
+print(prefix_Suff_Sum([1, 7, 3, 6, 5, 6]))
 
-def prefixMul(nums):
+def prefix_Suff_Mul(nums):
     length = len(nums)
 
     pref, suff = [0] * length, [0] * length
@@ -32,8 +32,8 @@ def prefixMul(nums):
         suff[i] = nums[i] * prev
         prev *= nums[i]
 
-    return nums, pref, suff
+    return (pref, suff)
 
-print(prefixMul([1, 4, 3, 6]))
+print(prefix_Suff_Mul([1, 4, 3, 6]))
 
 
