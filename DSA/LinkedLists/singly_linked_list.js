@@ -7,7 +7,6 @@ function Node(val, next) {
 
 class Node{
     constructor(val){
-        // mistake, was using self instead of this
         this.val = val
         this.next = null
     }

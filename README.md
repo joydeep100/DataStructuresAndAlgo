@@ -1,1 +1,1 @@
-#### Learning DSA with JavaScript & Python!
+#### Learning DSA with Python!
