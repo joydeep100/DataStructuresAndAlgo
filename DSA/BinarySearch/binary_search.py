@@ -31,7 +31,7 @@ class Solution:
 
         while l <= r:
 
-            mid = (l+r) // 2
+            mid = (l+r) // 2  # better to use l + (r-l)//2 to avoid int overflow
 
             if nums[mid] == target:
                 return mid
@@ -76,11 +76,11 @@ def searchInsert(nums, target):
         else:
             return mid
 
+    # trick we could have simply returned left here
     if target > nums[mid]:
         return mid + 1
     else:
         return mid
-    # trick we could have also returned True here
         
     '''
     say 

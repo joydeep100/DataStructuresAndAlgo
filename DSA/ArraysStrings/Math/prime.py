@@ -52,7 +52,3 @@ def prime_opt(n):
     return True
 
 print(prime_opt(8))
-
-"""
-Now again if 
-"""

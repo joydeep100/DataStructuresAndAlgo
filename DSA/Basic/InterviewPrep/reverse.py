@@ -19,13 +19,13 @@ print(reverseList([1,2,3]))
 def reverseStr(str):
     '''Reverse a list using recursion'''
     if not str: # handle boundary conditions
-        return []
+        return ''
     if len(str) == 1:
         return str
 
     return str[-1] + reverseStr(str[:-1])
 
-print(reverseStr('abc'))
+print(reverseStr('abcc'))
 
 def reverseListIter(arr):
     '''Reverse a list iteratively without using additional space'''
@@ -60,13 +60,11 @@ def reverseList2p(arr):
 
 def reverse(s):
     '''Reverse a string'''
-    if not s:   # handle boundary conditions
-        return ''
-    if len(s) == 1:
+    if len(s) <= 1:
         return s
         
     return s[-1] + reverse(s[:-1]) 
     
-# print(reverse(''))
-# print(reverse('a'))
-# print(reverse('abcde'))
+print(reverse(''))
+print(reverse('a'))
+print(reverse('abcde'))

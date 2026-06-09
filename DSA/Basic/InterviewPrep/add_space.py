@@ -8,6 +8,8 @@ def add_spaces(s):
         if char.isupper() and i != 0:
             result.append(' ')
         result.append(char)
+
+    # this is efficient as well
     return ''.join(result)
 
 

@@ -26,7 +26,7 @@ def maxOperations(nums, k):
     res = 0
 
     # if i did not sort some tests were failing. *** IMP ***
-    nums = sorted(nums)
+    nums.sort()
 
     while left < right:
 

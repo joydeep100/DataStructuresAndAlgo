@@ -1,4 +1,4 @@
-from basics import print_tree
+from DSA.Trees.Binary_Tree.binary_tress_dfs_bfs import print_tree
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
